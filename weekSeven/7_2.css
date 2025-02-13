@@ -1,0 +1,188 @@
+/* تكليفات CSS الدروس من 68 إلى 73 */
+* {
+  font-family: serif, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+/* التكليف 01 */
+.ass-1 h1 {
+  width: 150px;
+  height: 100px;
+  margin: 80px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 40px;
+  position: relative;
+  background-color: #FF5722;
+}
+
+.ass-1 h1::before,
+.ass-1 h1::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #FF5722;
+  z-index: -1;
+}
+.ass-1 h1::before {
+  transform: skew(10deg, 10deg);
+  -webkit-transform: skew(10deg, 10deg);
+  -moz-transform: skew(10deg, 10deg);
+  -ms-transform: skew(10deg, 10deg);
+  -o-transform: skew(10deg, 10deg);
+}
+.ass-1 h1::after {
+  transform: skew(-10deg, -10deg);
+  -webkit-transform: skew(-10deg, -10deg);
+  -moz-transform: skew(-10deg, -10deg);
+  -ms-transform: skew(-10deg, -10deg);
+  -o-transform: skew(-10deg, -10deg);
+}
+/* ==================== */
+/* التكليف 02 */
+h1 {
+  width: 150px;
+  height: 100px;
+  margin: 20px auto;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+h1::before,
+h1::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #009688;
+}
+h1::after {
+  z-index: -1;
+  transform: translate(5px);
+  -webkit-transform: translate(5px);
+  -moz-transform: translate(5px);
+  -ms-transform: translate(5px);
+  -o-transform: translate(5px);
+}
+h1::before {
+  z-index: -2;
+  transform: skewx(20deg) translateX(-15px);
+  -webkit-transform: skewx(20deg) translateX(-15px);
+  -moz-transform: skewx(20deg) translateX(-15px);
+  -ms-transform: skewx(20deg) translateX(-15px);
+  -o-transform: skewx(20deg) translateX(-15px);
+}
+p::before {
+  content: "";
+  width: 20px;
+  height: 100px;
+  background-color: #009688;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translatex(-45px) skewX(20deg);
+  -webkit-transform: translatex(-45px) skewX(20deg);
+  -moz-transform: translatex(-45px) skewX(20deg);
+  -ms-transform: translatex(-45px) skewX(20deg);
+  -o-transform: translatex(-45px) skewX(20deg);
+}
+/* ================ */
+/* التكليف 03 
+.class {
+    transform: translateX(20px), translateY(100px), scalex(3),
+                skewY(0.2679deg), skewX(0deg), scaleY(3);
+} */
+/* ================== */
+/* التكليف 04 */
+.one {
+  width: 200px;
+  height: 200px;
+  margin: 120px auto 50px;
+  padding: 10px;
+  background-color: #607d8b;
+  border-bottom: 5px solid black;
+  font-size: 20px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+.one::before {
+  content: "";
+  width: 68%;
+  height: 68%;
+  background-color: black;
+  position: absolute;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  bottom: 130px;
+  right: 30px;
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+}
+.one::after {
+  content: "Elzero";
+  width: 100%;
+  height: 5px;
+  color: white;
+  position: absolute;
+  bottom: 15px;
+  left: 5px;
+}
+/* ============== */
+/* التكليف 05 */
+.two {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  position: relative;
+  transition: 1s 0s ease;
+  -webkit-transition: 1s 0s ease;
+  -moz-transition: 1s 0s ease;
+  -ms-transition: 1s 0s ease;
+  -o-transition: 1s 0s ease;
+  transform-style: preserve-3d;
+  perspective: 600px;
+}
+.two::before,
+.two::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+}
+.two::before {
+  content: "Front";
+  background-color: #fa3664;
+}
+.two::after {
+  content: "Back";
+  background-color: #1692fc;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: rotatex(180deg);
+  -webkit-transform: rotatex(180deg);
+  -moz-transform: rotatex(180deg);
+  -ms-transform: rotatex(180deg);
+  -o-transform: rotatex(180deg);
+}
+.two:hover {
+  transform: rotatex(180deg);
+  -webkit-transform: rotatex(180deg);
+  -moz-transform: rotatex(180deg);
+  -ms-transform: rotatex(180deg);
+  -o-transform: rotatex(180deg);
+}

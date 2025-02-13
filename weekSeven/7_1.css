@@ -1,0 +1,112 @@
+/* تكليفات CSS الدروس من 65 إلى 67 */
+* {
+    box-sizing: border-box;
+    font-family: serif, Helvetica, sans-serif;
+}
+/* التكليف 01 */
+:root {
+    --colorone:#eee;
+    --colortwo:#03a9f4;
+    --colorthree:#e91e63;
+}
+.ass-1 div {
+    width: 300px;
+    height: 200px;
+    margin: 50px 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.elzero {
+    background-color: var(--colorone);
+    color: #03a9f4;
+    font-size: 40px;
+    font-weight: bold;
+}
+.pink {
+    background-color: var(--colorthree);
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+}
+.blue {
+    background-color: var(--colortwo);
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+}
+/* ================= */
+/* التكليف 02 */
+hr,
+.task {
+    position: relative;
+}
+.task {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorone);
+    position: absolute;
+    right: 35%;
+    top: 50%;
+    font-size: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.task::before {
+    content: "";
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    border: 10px solid var(--colorthree);
+    border-left-color: transparent;
+    position: absolute;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 0.5s 0s ease;
+    -webkit-transition: 0.5s 0s ease;
+    -moz-transition: 0.5s 0s ease;
+    -ms-transition: 0.5s 0s ease;
+    -o-transition: 0.5s 0s ease;
+}
+.task::after {
+    content: "";
+    width: 220px;
+    height: 220px;
+    background-color: transparent;
+    border: 10px solid var(--colortwo);
+    border-right-color: transparent;
+    position: absolute;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 0.5s 0.5s ease;
+    -webkit-transition: 0.5s 0.5s ease;
+    -moz-transition: 0.5s 0.5s ease;
+    -ms-transition: 0.5s 0.5s ease;
+    -o-transition: 0.5s 0.5s ease;
+}
+.task:hover::before,
+.task:hover::after {
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+}
