@@ -1,0 +1,77 @@
+/* تكليفات CSS الدروس من 86 إلى 88 */
+* {
+  box-sizing: border-box;
+}
+/* التكليف 01 */
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-position {
+  top: 50%;
+  right: 50%;
+}
+
+.circle-100 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.circle-200 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+/* ================= */
+/* التكليف 02 */
+div {
+  background-color: #eee;
+  width: 800px;
+  margin: auto;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 30px;
+  position: relative;
+}
+
+.arrow::before {
+  content: "";
+  background-color: transparent;
+  border: 20px solid transparent;
+  position: absolute;
+}
+
+.arrow.top::before {
+  border-color: transparent transparent #eee;
+  top: -40px;
+  right: 50%;
+}
+
+.arrow.bottom::before {
+  border-color: #eee transparent transparent transparent;
+  bottom: -40px;
+  right: 50%;
+}
+
+.arrow.right::before {
+  border-color: transparent transparent transparent #eee;
+  bottom: 15px;
+  right: -40px;
+}
+
+.arrow.left::before {
+  border-color: transparent #eee transparent transparent;
+  bottom: 15px;
+  left: -40px;
+}

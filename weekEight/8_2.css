@@ -1,0 +1,45 @@
+/* تكليفات CSS الدروس من 78 إلى 82 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 400px;
+    margin: 60px auto;
+    text-align: center;
+    font-size: 30px;
+}
+
+div.main.red {
+    color: red;
+}
+
+div[class="child"]+div[class="child"] {
+    color: red;
+}
+
+div[class="baby"]:only-child {
+    color: red;
+}
+
+.task-4>div:nth-child(4),
+.task-4>div:nth-child(5),
+.task-4>div:nth-child(6) {
+    color: red;
+}
+.task-5 div:nth-child(2) div {
+    color: red;
+}
+
+.task-6 div:first-child div:nth-child(3),
+.task-6 div:nth-child(2) div:nth-child(4) {
+    color: red;
+}
+
+.task-7 div:first-child div:nth-of-type(2) {
+    color: red;
+}
+
+.task-8 div :not(:first-child):not(:last-child):not(h3) {
+    color: red;
+}
