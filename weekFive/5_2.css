@@ -1,0 +1,238 @@
+/* تكليفات CSS الدروس من 46 إلى 53 */
+* {
+  box-sizing: border-box;
+}
+/* التكليف 01 */
+.parent1 {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background-color: #eee;
+  color: rgb(209, 137, 2);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50% 50%;
+  -webkit-border-radius: 50% 50%;
+  -moz-border-radius: 50% 50%;
+  -ms-border-radius: 50% 50%;
+  -o-border-radius: 50% 50%;
+  box-shadow: 5px -1px 0 rgb(118, 118, 250), -5px 2px 0 rgb(253, 104, 104);
+}
+/* ===================== */
+/* التكليف 02 */
+.parent2 {
+  width: 600px;
+  height: 300px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #eee;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.parent2 div {
+  width: calc(550px / 3);
+  background-color: rgb(253, 104, 104);
+  padding: 10px;
+}
+/* ===================== */
+/* التكليف 03 */
+.parent3 {
+  width: 600px;
+  height: 300px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #eee;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.parent3 div {
+  width: calc(550px / 3);
+  background-color: rgb(83, 83, 143);
+  padding: 10px;
+}
+.one {
+  order: 6;
+  align-self: flex-end;
+}
+.two,
+.four,
+.five,
+.six {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.two {
+  order: 5;
+}
+.three {
+  align-self: baseline;
+}
+.four {
+  order: 3;
+}
+.five {
+  order: 4;
+}
+.six {
+  order: -1;
+}
+/* ===================== */
+/* التكليف 04 */
+.parent4 {
+  width: 600px;
+  height: 300px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.parent4 div {
+  height: calc(250px / 3);
+  background-color: #009688;
+  padding: 10px;
+  color: white;
+}
+.one-1,
+.three-3 {
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+}
+.two-2 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ===================== */
+/* التكليف 05 */
+.parent5 {
+  width: 600px;
+  height: 300px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+}
+.parent5 div {
+  width: calc(140% / 8);
+  height: calc(100% / 2);
+}
+.one1,
+.two2,
+.three3,
+.four4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.one1 {
+  order: 0;
+  background-color: #ff9800;
+}
+.two2 {
+  order: 1;
+  background-color: #8bc34a;
+  align-self: flex-end;
+}
+.three3 {
+  order: 3;
+  background-color: #795548;
+}
+.four4 {
+  order: -1;
+  background-color: #673ab7;
+  align-self: flex-end;
+}
+/* ===================== */
+/* التكليف 06 */
+:root {
+  --maincolor: #eee;
+  --secondcolor: #ddd;
+  --mainpadding: 10px;
+}
+.page {
+  margin: 50px auto;
+  padding: var(--mainpadding);
+  width: 800px;
+  height: 500px;
+  background-color: var(--maincolor);
+  display: flex;
+  flex-wrap: wrap;
+}
+.page .header {
+  max-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+.page .header .logo {
+  width: 15%;
+  background-color: var(--secondcolor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page .header .links {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  background-color: var(--secondcolor);
+  width: 83%;
+  right: 0;
+  margin-top: 0;
+  padding-right: var(--mainpadding);
+}
+.page .header ul li {
+  margin-left: 10px;
+}
+.page .main-area {
+  width: 100%;
+  height: 360px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.page .main-area .content,
+.page .main-area .sidebar {
+  background-color: var(--secondcolor);
+  padding: var(--mainpadding);
+}
+.page .main-area .content {
+  width: 64%;
+}
+.page .main-area .sidebar {
+  width: 34%;
+}
+.page .footer {
+  background-color: var(--secondcolor);
+  width: 100%;
+  height: 50px;
+  padding: var(--mainpadding);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.page .footer .copyright,
+.page .footer .design {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

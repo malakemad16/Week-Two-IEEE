@@ -1,0 +1,181 @@
+/* تكليفات CSS الدروس من 57 إلى 64 */
+* {
+  box-sizing: border-box;
+}
+/* التكليف 01 */
+.grid {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-rows: 50px 290px;
+  row-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+}
+.grid div {
+  background-color: #607d8b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  counter-increment: count;
+}
+.grid div::before {
+  content: "Element " counter(count);
+  display: flex;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*==============  */
+/* التكليف 02 */
+:root {
+    --mainpadding: 10px;
+}
+.layout {
+  height: 400px;
+  padding: var(--mainpadding);
+  color: white;
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "head head head head"
+    "sec sec sec aside" "foot foot foot foot";
+}
+header {
+  grid-area: head;
+  background-color: #03a9f4;
+}
+::before {
+  display: flex;
+  padding: var(--mainpadding);
+}
+header::before {
+  content: "Header";
+}
+section {
+    grid-area: sec;
+    background-color: #ff5722;
+}
+section::before {
+  content: "Section";
+}
+aside {
+  grid-area: aside;
+  background-color: #607d8b;
+}
+aside::before {
+  content: "Aside";
+}
+footer {
+  grid-area: foot;
+  background-color: #009688;
+}
+footer::before {
+    content: "Footer";
+}
+/*==============  */
+/* التكليف 03 */
+.grid2 {
+    background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: auto 1fr 1fr auto;
+  gap: 20px;
+}
+.grid2 div {
+  background-color: #403f3f;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*==============  */
+/* التكليف 04 */
+
+.grid3 {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-rows: repeat(6,1fr);
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+    grid-template-areas: "eight eight eight eight eight" 
+    "two two two three three" "four four five five five"
+    "six six five five five" "seven seven five five five"
+    "one one one one one";
+}
+.grid3 div {
+    background-color: #2196f3;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.one {
+    grid-area: one;
+}
+.two {
+    order: 1;
+    grid-area: two;
+}
+.three {
+    order: 2;
+    grid-area: three;
+}
+.four {
+    order: 3;
+    grid-area: four;
+}
+.five {
+    order: 4;
+    grid-area: five;
+    grid-row: 3/span 3;
+}
+.six {
+    order: 5;
+    grid-area: six;
+}
+.seven {
+    order: 6;
+    grid-area: seven;
+}
+.eight {
+    order: -1;
+    grid-area: eight;
+}
+/*==============  */
+/* التكليف 05 */
+.sec {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+    grid-template-columns: repeat(2,auto);
+    gap: 20px;
+    align-content: space-between;
+}
+.sec div {
+    background-color: #e91e63;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
